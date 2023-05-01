@@ -28,9 +28,23 @@ $price-discount: #FF0000
     justify-content: space-between
     align-items: center
 
+@mixin wrap-column-start
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: flex-start
+
 @mixin content-position
     content: ""
     position: absolute
+
+@mixin font16-line21
+    font-size: 16px
+    line-height: 21px
+
+@mixin font13-line17
+    font-size: 13px
+    line-height: 17px
 
 // FONTS
 
@@ -71,7 +85,7 @@ body
     font-family: "Segoe UI", sans-serif
     background-color: $gradient-2
     overflow-x: hidden
-    padding-bottom: 12rem
+    padding-bottom: 2.6rem
 
     &::before
         @include content-position
@@ -119,11 +133,9 @@ ul, ol
     border-radius: 4px
 
 .btn-gradient
+    @include font16-line21
     color: $color-white
     background: $btn-gradient
-    font-size: 16px
-    font-weight: 400
-    line-height: 21px
     letter-spacing: 0.06em
     text-transform: uppercase
     border: none
@@ -169,10 +181,9 @@ ul, ol
     line-height: 32px
 
     &-old
+        @include font16-line21
         position: relative
         color: $color-grey
-        font-size: 16px
-        line-height: 21px
 
         &::before
             @include content-position
@@ -203,10 +214,9 @@ ul, ol
         padding: 0px 10px 10px
 
     &__info
+        @include font16-line21
         width: 91%
         color: $gradient-2
-        font-size: 16px
-        line-height: 21px
         margin-bottom: 1rem
 
     &__price
@@ -276,20 +286,15 @@ ul, ol
             width: 43.5%
 
         &_right
-            display: flex
-            flex-direction: column
-            flex-wrap: wrap
-            align-items: flex-start
+            @include wrap-column-start
             color: $gradient-2
 
         &-subtitle
-            font-size: 16px
-            line-height: 21px
+            @include font16-line21
             margin-bottom: 5px
 
         &-info
-            font-size: 13px
-            line-height: 17px
+            @include font13-line17
             margin-bottom: 2rem
 
         &-prices
@@ -299,8 +304,7 @@ ul, ol
 
         &-price,
         &-price_discount
-            font-size: 16px
-            line-height: 21px
+            @include font16-line21
 
         &-price_discount
             color: $color-white
@@ -312,8 +316,7 @@ ul, ol
         width: 100%
 
         td
-            font-size: 13px
-            line-height: 17px
+            @include font13-line17
             padding: 5.61px 0px
 
         span
@@ -324,12 +327,11 @@ ul, ol
             color: $price-discount
 
     &__promocode
+        @include font16-line21
         display: inline
         border: 1px dashed #131316
         color: #131316
         font-weight: 700
-        font-size: 16px
-        line-height: 21px
         text-transform: uppercase
         margin: 0 auto 1rem
         padding: 18.7px 79.05px
@@ -338,3 +340,34 @@ ul, ol
         display: inline
         margin: 0 auto
         padding: 19.5px 96.4px
+
+// FOOTER
+
+.main-footer
+    text-align: center
+
+    &__subtitle
+        @include font16-line21
+        margin-bottom: 2rem
+
+    &__icons
+        @include display-between-center
+        width: 38%
+        margin: 0 auto 3rem
+
+    &__info
+        @include display-between-center
+
+.contacts
+    @include wrap-column-start
+
+    &__txt
+        @include font13-line17
+        color: rgba($color-white, 0.5)
+
+    &__link
+        @include font16-line21
+        color: $color-white
+
+        &_phone
+            text-decoration: none
