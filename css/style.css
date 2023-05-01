@@ -271,11 +271,28 @@ ul, ol {
 .promo__title {
   margin-bottom: 2rem;
 }
-.promo__subtitle {
-  color: #131316;
-  font-size: 16px;
-  line-height: 21px;
-  margin-bottom: 5px;
+.promo__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 3rem 0px 3.5rem 0px;
+}
+.promo__rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+.promo__rate-item:not(:last-child) img {
+  margin-right: 8px;
 }
 .promo__card {
   display: -webkit-box;
@@ -287,8 +304,8 @@ ul, ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 3rem 6.5rem 3.5rem 0px;
+  margin-bottom: 2.8rem;
+  padding-right: 6.5rem;
 }
 .promo__card_left, .promo__card_right {
   width: 43.5%;
@@ -306,18 +323,71 @@ ul, ol {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  color: #131316;
 }
-.promo__rate {
+.promo__card-subtitle {
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 5px;
+}
+.promo__card-info {
+  font-size: 13px;
+  line-height: 17px;
+  margin-bottom: 2rem;
+}
+.promo__card-prices {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 2rem;
 }
-.promo__rate-item:not(:last-child) img {
-  margin-right: 8px;
+.promo__card-price, .promo__card-price_discount {
+  font-size: 16px;
+  line-height: 21px;
+}
+.promo__card-price_discount {
+  color: #ffffff;
+  font-weight: 700;
+  background-color: #FF0000;
+  padding: 1.5px 10.63px;
+}
+.promo__discount-info {
+  width: 100%;
+}
+.promo__discount-info td {
+  font-size: 13px;
+  line-height: 17px;
+  padding: 5.61px 0px;
+}
+.promo__discount-info span {
+  text-transform: uppercase;
+}
+.promo__discount-info_economy {
+  font-weight: 700;
+  color: #FF0000;
+}
+.promo__promocode {
+  display: inline;
+  border: 1px dashed #131316;
+  color: #131316;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0 auto 1rem;
+  padding: 18.7px 79.05px;
+}
+.promo__button {
+  display: inline;
+  margin: 0 auto;
+  padding: 19.5px 96.4px;
 }
 
 /*# sourceMappingURL=style.css.map */

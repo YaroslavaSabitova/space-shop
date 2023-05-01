@@ -13,6 +13,7 @@ $gradient-4: #4C4CFF
 $btn-gradient: linear-gradient(87.23deg, $gradient-3 -91.42%, $gradient-4 99.79%)
 
 $card-background: rgba($color-white, 0.95)
+$price-discount: #FF0000
 
 @mixin display-between
     display: flex
@@ -252,16 +253,23 @@ ul, ol
     &__title
         margin-bottom: 2rem
 
-    &__subtitle
-        color: $gradient-2
-        font-size: 16px
-        line-height: 21px
-        margin-bottom: 5px
+    &__info
+        display: flex
+        flex-direction: column
+        background-color: $card-background
+        padding: 3rem 0px 3.5rem 0px
+
+    &__rate
+        @include display-align
+        margin-bottom: 10px
+
+        &-item:not(:last-child) img
+            margin-right: 8px
 
     &__card
         @include display-between-center
-        background-color: $card-background
-        padding: 3rem 6.5rem 3.5rem 0px
+        margin-bottom: 2.8rem
+        padding-right: 6.5rem
 
         &_left,
         &_right
@@ -272,10 +280,61 @@ ul, ol
             flex-direction: column
             flex-wrap: wrap
             align-items: flex-start
+            color: $gradient-2
 
-    &__rate
-        @include display-align
-        margin-bottom: 10px
+        &-subtitle
+            font-size: 16px
+            line-height: 21px
+            margin-bottom: 5px
 
-        &-item:not(:last-child) img
-            margin-right: 8px
+        &-info
+            font-size: 13px
+            line-height: 17px
+            margin-bottom: 2rem
+
+        &-prices
+            @include display-between-center
+            width: 100%
+            margin-bottom: 2rem
+
+        &-price,
+        &-price_discount
+            font-size: 16px
+            line-height: 21px
+
+        &-price_discount
+            color: $color-white
+            font-weight: 700
+            background-color: $price-discount
+            padding: 1.5px 10.63px
+
+    &__discount-info
+        width: 100%
+
+        td
+            font-size: 13px
+            line-height: 17px
+            padding: 5.61px 0px
+
+        span
+            text-transform: uppercase
+
+        &_economy
+            font-weight: 700
+            color: $price-discount
+
+    &__promocode
+        display: inline
+        border: 1px dashed #131316
+        color: #131316
+        font-weight: 700
+        font-size: 16px
+        line-height: 21px
+        text-transform: uppercase
+        margin: 0 auto 1rem
+        padding: 18.7px 79.05px
+
+    &__button
+        display: inline
+        margin: 0 auto
+        padding: 19.5px 96.4px
