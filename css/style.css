@@ -208,6 +208,28 @@ ul, ol {
   text-align: center;
   padding: 0px 10px 10px;
 }
+.goods__item_one, .goods__item_two, .goods__item_three {
+  width: 32.259%;
+}
+.goods__item_four, .goods__item_five {
+  width: 49.194%;
+}
+.goods__item_one img {
+  padding-top: 3.1rem;
+  margin-bottom: 3.4rem;
+}
+.goods__item_two img, .goods__item_three img {
+  padding-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+.goods__item_four img {
+  padding-top: 1.8rem;
+  margin-bottom: 2.1rem;
+}
+.goods__item_five img {
+  padding-top: 0.2rem;
+  margin-bottom: 0.1rem;
+}
 .goods__info {
   font-size: 16px;
   line-height: 21px;
@@ -230,38 +252,6 @@ ul, ol {
 .goods__button {
   width: 100%;
   padding: 9.5px 0;
-}
-
-.goods__list li:nth-child(1),
-.goods__list li:nth-child(2),
-.goods__list li:nth-child(3) {
-  width: 32.259%;
-}
-
-.goods__list li:nth-child(4),
-.goods__list li:nth-child(5) {
-  width: 49.194%;
-}
-
-.goods__list li:nth-child(1) img {
-  padding-top: 3.1rem;
-  margin-bottom: 3.4rem;
-}
-
-.goods__list li:nth-child(2) img,
-.goods__list li:nth-child(3) img {
-  padding-top: 2rem;
-  margin-bottom: 2.5rem;
-}
-
-.goods__list li:nth-child(4) img {
-  padding-top: 1.8rem;
-  margin-bottom: 2.1rem;
-}
-
-.goods__list li:nth-child(5) img {
-  padding-top: 0.2rem;
-  margin-bottom: 0.1rem;
 }
 
 .promo {
