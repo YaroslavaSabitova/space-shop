@@ -38,11 +38,10 @@ body {
   background-color: #D9D9D9;
   overflow-x: hidden;
   padding-bottom: 12rem;
-  border: 2px solid red;
 }
 body::before {
-  position: absolute;
   content: "";
+  position: absolute;
   top: 0;
   left: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 19, 22, 0)), to(#131316)), url(../img/background.png) center/cover no-repeat;
@@ -62,6 +61,7 @@ h1, h2, h3, h4 {
 }
 
 button {
+  border: none;
   cursor: pointer;
 }
 
@@ -111,8 +111,8 @@ ul, ol {
   position: relative;
 }
 .logo:before {
-  position: absolute;
   content: "";
+  position: absolute;
   top: 28px;
   left: 62px;
   width: 24px;
@@ -131,19 +131,19 @@ ul, ol {
 
 .main-header {
   padding-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 4.7rem;
 }
 
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .main-nav__button {
   padding: 9.5px 9.125px;
@@ -162,8 +162,8 @@ ul, ol {
   line-height: 21px;
 }
 .price-old::before {
-  position: absolute;
   content: "";
+  position: absolute;
   width: 100%;
   height: 1px;
   background-color: #D9D9D9;
@@ -183,28 +183,28 @@ ul, ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   gap: 10px;
 }
 .goods__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: rgba(255, 255, 255, 0.95);
   text-align: center;
   padding: 0px 10px 10px;

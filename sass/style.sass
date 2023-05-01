@@ -12,6 +12,23 @@ $gradient-3: rgba(128, 26, 179, 0)
 $gradient-4: #4C4CFF
 $btn-gradient: linear-gradient(87.23deg, $gradient-3 -91.42%, $gradient-4 99.79%)
 
+@mixin display-between
+    display: flex
+    justify-content: space-between
+
+@mixin display-align
+    display: flex
+    align-items: center
+
+@mixin display-between-center
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+@mixin content-position
+    content: ""
+    position: absolute
+
 // FONTS
 
 @font-face
@@ -52,11 +69,9 @@ body
     background-color: $color-grey
     overflow-x: hidden
     padding-bottom: 12rem
-    border: 2px solid red
 
     &::before
-        position: absolute
-        content: ""
+        @include content-position
         top: 0
         left: 0
         background: $background-gradient, url(../img/background.png) center/cover no-repeat
@@ -72,6 +87,7 @@ h1, h2, h3, h4
     margin: 0
 
 button
+    border: none
     cursor: pointer
 
 p
@@ -113,8 +129,7 @@ ul, ol
     position: relative
 
     &:before
-        position: absolute
-        content: ""
+        @include content-position
         top: 28px
         left: 62px
         width: 24px
@@ -133,12 +148,10 @@ ul, ol
 
 .main-header
     padding-top: 2rem
-    margin-bottom: 4rem
+    margin-bottom: 4.7rem
 
 .main-nav
-    display: flex
-    align-items: center
-    justify-content: space-between
+    @include display-between-center
 
     &__button
         padding: 9.5px 9.125px
@@ -158,8 +171,7 @@ ul, ol
         line-height: 21px
 
         &::before
-            position: absolute
-            content: ""
+            @include content-position
             width: 100%
             height: 1px
             background-color: $color-grey
@@ -176,16 +188,14 @@ ul, ol
         margin-bottom: 2rem
 
     &__list
-        display: flex
+        @include display-between
         flex-direction: row
         flex-wrap: wrap
-        justify-content: space-between
         gap: 10px
 
     &__item
-        display: flex
+        @include display-align
         flex-direction: column
-        align-items: center
         background: rgba($color-white, 0.95)
         text-align: center
         padding: 0px 10px 10px
@@ -198,8 +208,7 @@ ul, ol
         margin-bottom: 1rem
 
     &__price
-        display: flex
-        align-items: center
+        @include display-align
         justify-content: space-around
         width: 100%
         margin-bottom: 1rem
