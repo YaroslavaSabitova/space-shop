@@ -1,0 +1,235 @@
+// VARIABLES AND MIXINS
+
+$color-white: #ffffff
+$color-grey: #D9D9D9
+$color-black: #000000
+
+$gradient-1: rgba(19, 19, 22, 0)
+$gradient-2: #131316
+$background-gradient: linear-gradient(180deg, $gradient-1 0%, $gradient-2 100%)
+
+$gradient-3: rgba(128, 26, 179, 0)
+$gradient-4: #4C4CFF
+$btn-gradient: linear-gradient(87.23deg, $gradient-3 -91.42%, $gradient-4 99.79%)
+
+// FONTS
+
+@font-face
+    font-family: "Segoe UI"
+    src: url('../fonts/Segoe UI.ttf')
+    font-weight: 400
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: "Segoe UI"
+    src: url('../fonts/Segoe UI Bold.ttf')
+    font-weight: 700
+    font-style: normal
+    font-display: swap
+
+// COMMON STYLES 
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+::-webkit-scrollbar
+    width: 0
+
+html
+    font-size: 62.5%
+    scroll-behavior: smooth
+
+body
+    position: relative
+    margin: 0 auto
+    max-width: 1000px
+    color: $color-white
+    font-size: 1.6rem
+    font-family: "Segoe UI", sans-serif
+    background-color: $color-grey
+    overflow-x: hidden
+    padding-bottom: 12rem
+    border: 2px solid red
+
+    &::before
+        position: absolute
+        content: ""
+        top: 0
+        left: 0
+        background: $background-gradient, url(../img/background.png) center/cover no-repeat
+        width: 1000px
+        height: 660px
+        z-index: -1
+
+img
+    height: auto
+    display: block
+
+h1, h2, h3, h4
+    margin: 0
+
+button
+    cursor: pointer
+
+p
+    text-transform: none
+
+ul, ol
+    list-style: none
+
+.container
+    width: 620px
+    margin: 0 auto
+
+.visually-hidden
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    border: 0
+    padding: 0
+    white-space: nowrap
+    clip-path: inset(100%)
+    clip: rect(0 0 0 0)
+    overflow: hidden
+
+.radius
+    border-radius: 4px
+
+.btn-gradient
+    color: $color-white
+    background: $btn-gradient
+    font-size: 16px
+    font-weight: 400
+    line-height: 21px
+    letter-spacing: 0.06em
+    text-transform: uppercase
+    border: none
+
+.logo
+    position: relative
+
+    &:before
+        position: absolute
+        content: ""
+        top: 28px
+        left: 62px
+        width: 24px
+        height: 23px
+        background: linear-gradient(87.23deg, rgba(128, 26, 179, 0) -91.42%, #4C4CFF 99.79%)
+        border: none
+        border-radius: 50%
+        z-index: -1
+
+.title
+    font-weight: 400
+    font-size: 32px
+    line-height: 43px
+
+// HEADER
+
+.main-header
+    padding-top: 2rem
+    margin-bottom: 4rem
+
+.main-nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &__button
+        padding: 9.5px 9.125px
+
+// SECTION GOODS
+
+.price
+    color: $gradient-2
+    font-weight: 700
+    font-size: 24px
+    line-height: 32px
+
+    &-old
+        position: relative
+        color: $color-grey
+        font-size: 16px
+        line-height: 21px
+
+        &::before
+            position: absolute
+            content: ""
+            width: 100%
+            height: 1px
+            background-color: $color-grey
+            bottom: 7.2px
+            left: 0px
+            z-index: 1
+
+
+.goods
+    margin-bottom: 5rem
+
+    &__title
+        text-align: center
+        margin-bottom: 2rem
+
+    &__list
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+        gap: 10px
+
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        background: rgba($color-white, 0.95)
+        text-align: center
+        padding: 0px 10px 10px
+
+    &__info
+        width: 91%
+        color: $gradient-2
+        font-size: 16px
+        line-height: 21px
+        margin-bottom: 1rem
+
+    &__price
+        display: flex
+        align-items: center
+        justify-content: space-around
+        width: 100%
+        margin-bottom: 1rem
+
+    &__button
+        width: 100%
+        padding: 9.5px 0
+
+.goods__list li:nth-child(1),
+.goods__list li:nth-child(2),
+.goods__list li:nth-child(3)
+    width: 32.259%
+
+.goods__list li:nth-child(4),
+.goods__list li:nth-child(5)
+    width: 49.194%
+
+.goods__list li:nth-child(1) img
+    padding-top: 3.3rem
+    margin-bottom: 3.7rem
+
+.goods__list li:nth-child(2) img,
+.goods__list li:nth-child(3) img
+    padding-top: 2.5rem
+    margin-bottom: 2.5rem
+
+.goods__list li:nth-child(4) img
+    padding-top: 2.2rem
+    margin-bottom: 2.2rem
+
+.goods__list li:nth-child(5) img
+    padding-top: 0.4rem
+    margin-bottom: 0.44rem
