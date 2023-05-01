@@ -35,7 +35,7 @@ body {
   color: #ffffff;
   font-size: 1.6rem;
   font-family: "Segoe UI", sans-serif;
-  background-color: #D9D9D9;
+  background-color: #131316;
   overflow-x: hidden;
   padding-bottom: 12rem;
 }
@@ -127,6 +127,7 @@ ul, ol {
   font-weight: 400;
   font-size: 32px;
   line-height: 43px;
+  text-align: center;
 }
 
 .main-header {
@@ -176,7 +177,6 @@ ul, ol {
   margin-bottom: 5rem;
 }
 .goods__title {
-  text-align: center;
   margin-bottom: 2rem;
 }
 .goods__list {
@@ -245,24 +245,79 @@ ul, ol {
 }
 
 .goods__list li:nth-child(1) img {
-  padding-top: 3.3rem;
-  margin-bottom: 3.7rem;
+  padding-top: 3.1rem;
+  margin-bottom: 3.4rem;
 }
 
 .goods__list li:nth-child(2) img,
 .goods__list li:nth-child(3) img {
-  padding-top: 2.5rem;
+  padding-top: 2rem;
   margin-bottom: 2.5rem;
 }
 
 .goods__list li:nth-child(4) img {
-  padding-top: 2.2rem;
-  margin-bottom: 2.2rem;
+  padding-top: 1.8rem;
+  margin-bottom: 2.1rem;
 }
 
 .goods__list li:nth-child(5) img {
-  padding-top: 0.4rem;
-  margin-bottom: 0.44rem;
+  padding-top: 0.2rem;
+  margin-bottom: 0.1rem;
+}
+
+.promo {
+  margin-bottom: 6rem;
+}
+.promo__title {
+  margin-bottom: 2rem;
+}
+.promo__subtitle {
+  color: #131316;
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 5px;
+}
+.promo__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 3rem 6.5rem 3.5rem 0px;
+}
+.promo__card_left, .promo__card_right {
+  width: 43.5%;
+}
+.promo__card_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.promo__rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+.promo__rate-item:not(:last-child) img {
+  margin-right: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */

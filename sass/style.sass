@@ -12,6 +12,8 @@ $gradient-3: rgba(128, 26, 179, 0)
 $gradient-4: #4C4CFF
 $btn-gradient: linear-gradient(87.23deg, $gradient-3 -91.42%, $gradient-4 99.79%)
 
+$card-background: rgba($color-white, 0.95)
+
 @mixin display-between
     display: flex
     justify-content: space-between
@@ -66,7 +68,7 @@ body
     color: $color-white
     font-size: 1.6rem
     font-family: "Segoe UI", sans-serif
-    background-color: $color-grey
+    background-color: $gradient-2
     overflow-x: hidden
     padding-bottom: 12rem
 
@@ -143,6 +145,7 @@ ul, ol
     font-weight: 400
     font-size: 32px
     line-height: 43px
+    text-align: center
 
 // HEADER
 
@@ -179,12 +182,10 @@ ul, ol
             left: 0px
             z-index: 1
 
-
 .goods
     margin-bottom: 5rem
 
     &__title
-        text-align: center
         margin-bottom: 2rem
 
     &__list
@@ -196,7 +197,7 @@ ul, ol
     &__item
         @include display-align
         flex-direction: column
-        background: rgba($color-white, 0.95)
+        background: $card-background
         text-align: center
         padding: 0px 10px 10px
 
@@ -227,18 +228,54 @@ ul, ol
     width: 49.194%
 
 .goods__list li:nth-child(1) img
-    padding-top: 3.3rem
-    margin-bottom: 3.7rem
+    padding-top: 3.1rem
+    margin-bottom: 3.4rem
 
 .goods__list li:nth-child(2) img,
 .goods__list li:nth-child(3) img
-    padding-top: 2.5rem
+    padding-top: 2rem
     margin-bottom: 2.5rem
 
 .goods__list li:nth-child(4) img
-    padding-top: 2.2rem
-    margin-bottom: 2.2rem
+    padding-top: 1.8rem
+    margin-bottom: 2.1rem
 
 .goods__list li:nth-child(5) img
-    padding-top: 0.4rem
-    margin-bottom: 0.44rem
+    padding-top: 0.2rem
+    margin-bottom: 0.1rem
+
+// SECTION PROMO
+
+.promo
+    margin-bottom: 6rem
+
+    &__title
+        margin-bottom: 2rem
+
+    &__subtitle
+        color: $gradient-2
+        font-size: 16px
+        line-height: 21px
+        margin-bottom: 5px
+
+    &__card
+        @include display-between-center
+        background-color: $card-background
+        padding: 3rem 6.5rem 3.5rem 0px
+
+        &_left,
+        &_right
+            width: 43.5%
+
+        &_right
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            align-items: flex-start
+
+    &__rate
+        @include display-align
+        margin-bottom: 10px
+
+        &-item:not(:last-child) img
+            margin-right: 8px
