@@ -193,6 +193,17 @@ ul, ol
             left: 0px
             z-index: 1
 
+.img__wrapper
+    @include display-align
+    justify-content: center
+    width: 100%
+
+    &_big
+        height: 165px
+
+    &_small
+        height: 135px
+
 .goods
     margin-bottom: 5rem
 
@@ -210,7 +221,7 @@ ul, ol
         flex-direction: column
         background: $card-background
         text-align: center
-        padding: 0px 10px 10px
+        padding: 10px 10px 10px
 
         &_one,
         &_two,
@@ -220,23 +231,6 @@ ul, ol
         &_four,
         &_five
             width: 49.194%
-
-        &_one img
-            padding-top: 3.1rem
-            margin-bottom: 3.4rem
-
-        &_two img,
-        &_three img
-            padding-top: 2rem
-            margin-bottom: 2.5rem
-
-        &_four img
-            padding-top: 1.8rem
-            margin-bottom: 2.1rem
-
-        &_five img
-            padding-top: 0.2rem
-            margin-bottom: 0.1rem
 
     &__info
         @include font16-line21
@@ -384,6 +378,27 @@ ul, ol
     body::before
         width: 80rem
 
+    .goods__item_one .goods__info
+        margin-bottom: 3.3rem
+
+    .promo
+
+        &__rate
+            margin: 0 auto 15px
+
+        &__img
+            margin: 0 auto
+
+        &__card
+            padding-right: 3.5rem
+            justify-content: space-around
+
+            &-subtitle
+                margin: 0 auto 10px
+
+            &-info
+                text-align: center
+
 @media (max-width: 767px)
 
     .container
@@ -398,18 +413,21 @@ ul, ol
     .goods__list
         gap: 30px
 
-    .goods__item_one,
-    .goods__item_two,
-    .goods__item_four,
-    .goods__item_five
-        width: 45.194%
+    .goods__item
+        &_one,
+        &_two,
+        &_four,
+        &_five
+            width: 45.194%
 
-    .goods__item_three
-        width: 100%
+        &_three
+            width: 100%
 
-    .goods__item_three img,
-    .goods__item_four img,
-    .goods__item_five img,
+        &_three img,
+        &_four img,
+        &_five img,
+            width: 230px
+
     .promo__img
         width: 230px
 
@@ -431,6 +449,9 @@ ul, ol
         width: 75%
         margin: 0 auto
 
+        &_three img
+            width: 210px
+
     .main-nav,
     .main-footer,
         width: 80%
@@ -447,9 +468,6 @@ ul, ol
             flex-direction: column
             padding-right: unset
 
-            &-info 
-                text-align: center
-
         &__card_left,
         &__card_right
             width: 90%
@@ -458,8 +476,7 @@ ul, ol
             align-items: center
 
         &__img
-            width: 210px
-            margin: 0 auto
+            width: 220px
 
         &__promocode,
         &__button
