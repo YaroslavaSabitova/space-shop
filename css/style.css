@@ -448,6 +448,10 @@ ul, ol {
   html {
     font-size: 61%;
   }
+
+  body::before {
+    width: 80rem;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -456,6 +460,10 @@ ul, ol {
 
   html {
     font-size: 60%;
+  }
+
+  body::before {
+    width: 65rem;
   }
 
   .goods__list {
@@ -487,6 +495,10 @@ ul, ol {
 
   html {
     font-size: 50%;
+  }
+
+  body::before {
+    width: 40rem;
   }
 
   .btn-gradient {
